@@ -81,6 +81,7 @@ var tallestPerson= function(array) {
   if( tallestArr.length === 0 ){ //it means that the array[0] is the tallest
 
       return array[0].name + " at " + array[0].heightInInches + " inches";
+      
   }
 
   return tallestArr[(tallestArr.length-1)].name + " at " + tallest + " inches";

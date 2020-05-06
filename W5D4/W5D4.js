@@ -53,6 +53,29 @@ shoppingSummary(shoppingList); //"I got 3 items at $99.73"
 
 
 
+
+*/
+
+function shoppingSummary(array){
+  var items= 0 //to count number of items
+  var total= 0 //to count the total money spent
+  var counter= 0 //for the loop
+
+  while(counter < array.length){
+
+    if (total + array[counter].price < 100) {
+      total += array[counter].price
+      items ++
+      counter ++
+
+    } else {
+
+          return "I got "+ items +" items at $"+ total
+    }
+
+  }
+}
+
 /*
 
 
@@ -98,3 +121,19 @@ Would return a new array with the following elements:
 
 //your answer is here
 
+function removeMostExpensive(array){
+  var expensive= array[0].price
+  var newArr= []
+
+  for (var i = 0; i < array.length; i++) {
+    
+    if(array[i].price > expensive){
+      expensive = array[i].price
+    } else {
+      newArr.push(array[i])
+    }
+
+  }
+
+  return newArr
+}
